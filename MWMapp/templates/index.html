@@ -1,0 +1,547 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Migrant Workers Management- Index</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'assets/img/favicon.png' %}" rel="icon">
+  <link href="{% static 'assets/img/apple-touch-icon.png' %}" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,600;1,700&family=Roboto:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&family=Work+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'assets/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'assets/css/main.css' %}" rel="stylesheet">
+  <link href="{% static 'assets/css/register.css' %}" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: UpConstruction - v1.0.1
+  * Template URL: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header d-flex align-items-center">
+    <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <a href="index" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1>MWM<span>.</span></h1>
+      </a>
+
+      <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+      <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+      <nav id="navbar" class="navbar">
+        <ul>
+          <li><a href="/index" class="active">Home</a></li>
+          <li><a href="/about">About Us</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/contact">Contact Us</a></li>
+          <!-- <li><a href="/form">dashboard</a></li> -->
+           <li class="dropdown"><a href=""><span>dashboard</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="/form">formdash </a></li>
+             
+              <li><a href="/index1_profile">index1_profile</a></li>
+              <li><a href="/example">example</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li>
+         
+        
+
+          <li class="dropdown"><a href="#"><span>Login</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+            <ul>
+              <li><a href="/login">Worker</a></li>
+             
+              <li><a href="/jblogin">Job Provider</a></li>
+              <li><a href="/insurancelogin">Insurance schemes</a></li>
+              <li><a href="/policelogin">Police</a></li>
+            </ul>
+          </li>
+
+         
+        
+       
+      </ul>
+      
+      </nav><!-- .navbar -->
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero">
+
+    <div class="info d-flex align-items-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2 data-aos="fade-down">Welcome to<span> M W M</span></h2>
+            <p data-aos="fade-up">MigrantWorkers Management is a free platform for job search and Worker search etc..</p>
+            <a data-aos="fade-up" data-aos-delay="200" href="#get-started" class="btn-get-started">Get Started</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <div class="carousel-item active" style="background-image: url(static/assets/img/hero-carousel/hero-carousel-1.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(static/assets/img/hero-carousel/hero-carousel-2.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(static/assets/img/hero-carousel/hero-carousel-3.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(static/assets/img/hero-carousel/hero-carousel-4.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(static/assets/img/hero-carousel/hero-carousel-5.jpg)"></div>
+
+      <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= Get Started Section ======= -->
+    <section id="get-started" class="get-started section-bg">
+      <div class="container">
+
+        <div class="row justify-content-between gy-4">
+
+          <div class="col-lg-6 d-flex align-items-center" data-aos="fade-up">
+            <div class="content">
+              <h3>How can I Search Workers?</h3>
+              <p>i)Fist You have to register By clicking the Register button on the top</p>
+              <p>ii)cjdvcyid vcdsuodhvo hdsbvuodhsvwo</p>
+            </div>
+          </div>
+
+
+         <!--  <NEXT SIDE> -->
+          <!-- <div class="row gy-3">
+            <div class="col-md-12">
+              <p>SGESGRHR</p>
+            </div> -->
+            
+            
+         
+          <div class="col-lg-5" data-aos="fade">
+            <!-- <form action="forms/quote.php" method="post" class="php-email-form"> -->
+             <!--  <h3>Get a quote</h3>
+              <p>Vel nobis odio laboriosam et hic voluptatem. Inventore vitae totam. Rerum repellendus enim linead sero park flows.</p> -->
+              <div class="row gy-3">
+                <div class="content">
+              <h3>How can I Search Works?</h3>
+              <p>i)Fist You have to register By clicking the Register button on the top</p>
+              <p>ii)cjdvcyid vcdsuodhvo hdsbvuodhsvwo</p>
+             </div>
+                
+
+              </div>
+           <!--  </form> -->
+          </div>
+          
+          <!-- End Quote Form -->
+
+        </div>
+
+      </div>
+    </section><!-- End Get Started Section -->
+<!-- ======= Types of job Posts Section ======= -->
+    <section id="recent-blog-posts" class="recent-blog-posts">
+      <div class="container" data-aos="fade-up"">
+
+    
+    
+  <div class=" section-header">
+        <h2>Types of Jobs </h2>
+        <p>Many types of jobs are here for you:</p>
+      </div>
+
+      <div class="row gy-5">
+
+        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+          <div class="post-item position-relative h-100">
+
+            <div class="post-img position-relative overflow-hidden">
+              <img src="{% static 'blog-1.jpg' %}" class="img-fluid" alt="">
+              <!-- <span class="post-date">December 12</span> -->
+            </div>
+
+            <div class="post-content d-flex flex-column">
+
+              <h3 class="post-title">Construction Works</h3>
+
+              <!-- <div class="meta d-flex align-items-center"> -->
+                <!-- <div class="d-flex align-items-center">
+                  <i class="bi bi-person"></i> <span class="ps-2">Julia Parker</span>
+                </div> -->
+                <!-- <span class="px-3 text-black-50">/</span> -->
+                <!-- <div class="d-flex align-items-center">
+                  <i class="bi bi-folder2"></i> <span class="ps-2">Construction</span>
+                </div> -->
+              <!-- </div> -->
+
+              <hr>
+
+              <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+
+            </div>
+
+          </div>
+        </div><!-- End post item -->
+
+        <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="post-item position-relative h-100">
+
+            <div class="post-img position-relative overflow-hidden">
+              <img src="{% static 'blog-2.jpg' %}" class="img-fluid" alt="">
+              <!-- <span class="post-date">July 17</span> -->
+            </div>
+
+            <div class="post-content d-flex flex-column">
+
+              <h3 class="post-title">Plumbing</h3>
+
+              <!-- <div class="meta d-flex align-items-center">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-person"></i> <span class="ps-2">Mario Douglas</span>
+                </div>
+                <span class="px-3 text-black-50">/</span>
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-folder2"></i> <span class="ps-2">Sports</span>
+                </div>
+              </div> -->
+
+              <hr>
+
+              <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+
+            </div>
+
+          </div>
+        </div><!-- End post item -->
+
+        <div class="col-xl-4 col-md-6">
+          <div class="post-item position-relative h-100" data-aos="fade-up" data-aos-delay="300">
+
+            <div class="post-img position-relative overflow-hidden">
+              <img src="{% static 'blog-3.jpg' %}" class="img-fluid" alt="">
+              <!-- <span class="post-date">September 05</span> -->
+            </div>
+
+            <div class="post-content d-flex flex-column">
+
+              <h3 class="post-title">House hold works</h3>
+
+              <!-- <div class="meta d-flex align-items-center">
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-person"></i> <span class="ps-2">Lisa Hunter</span>
+                </div>
+                <span class="px-3 text-black-50">/</span>
+                <div class="d-flex align-items-center">
+                  <i class="bi bi-folder2"></i> <span class="ps-2">Economics</span>
+                </div>
+              </div> -->
+
+              <hr>
+
+              <a href="blog-details.html" class="readmore stretched-link"><span>Read More</span><i class="bi bi-arrow-right"></i></a>
+
+            </div>
+
+          </div>
+        </div><!-- End post item -->
+
+      </div>
+
+      </div>
+    </section>
+    <!-- End Job of job Posts Section -->
+    <!-- ======= users Section ======= -->
+    <section id="constructions" class="constructions">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Users</h2>
+          <p>Users of this platform :</p>
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url(static/user/user-1.jpg);"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Migrant Workers</h4>
+                    <p>Fuga in dolorum et iste et culpa. Commodi possimus nesciunt modi voluptatem placeat deleniti adipisci. Cum delectus doloribus non veritatis. Officia temporibus illo magnam. Dolor eos et.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url(static/assets/img/constructions-2.jpg);"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Job Providers</h4>
+                    <p>Sunt deserunt maiores voluptatem autem est rerum perferendis rerum blanditiis. Est laboriosam qui iste numquam laboriosam voluptatem architecto. Est laudantium sunt at quas aut hic. Eum dignissimos.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url(static/user/user3-police.jpg);"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Police and labour officer</h4>
+                    <p>Dicta porro nobis. Velit cum in. Nesciunt dignissimos enim molestiae facilis numquam quae quaerat ipsam omnis. Neque debitis ipsum at architecto officia laboriosam odit. Ut sunt temporibus nulla culpa.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url(static/user/user4-insurance.jpg);"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Insurance Agencies</h4>
+                    <p>Aut est quidem doloremque voluptatem magnam quis excepturi vero quia. Eum eos doloremque architecto illo at beatae dolore. Fugiat suscipit et sint ratione dolores. Aut aliquid ea dolores libero nobis.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+        </div>
+
+      </div>
+    </section><!-- End users Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Services</h2>
+          <p>M W M Provide the following services to Our clients</p>
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item  position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-mountain-city"></i>
+              </div>
+              <h3>Job Search</h3>
+              <p>The Migrant workers can search job ,apply for job , view and apply for insurance polices and fitness certificate</p>
+              <a href="service-details.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
+              </div>
+              <h3>Seach for workers</h3>
+              <p>The Registered Job providers can search workers who are avilable </p>
+              <a href="service-details.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-compass-drafting"></i>
+              </div>
+              <h3>Insurance Policies</h3>
+              <p>The workers can view insurance policies, select suitable policies and take polices</p>
+              <a href="service-details.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-trowel-bricks"></i>
+              </div>
+              <h3>Fitness certification</h3>
+              <p>The Logined workers can apply for fitness certificate directly to the police department</p>
+              <a href="service-details.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-helmet-safety"></i>
+              </div>
+              <h3>Complaints</h3>
+              <p>Job provides and workers can Register complaints.The complaints will directly view by the labour officers and police.</p>
+              <a href="service-details.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+            <div class="service-item position-relative">
+              <div class="icon">
+                <i class="fa-solid fa-arrow-up-from-ground-water"></i>
+              </div>
+              <h3>Dolori Architecto</h3>
+              <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
+              <a href="service-details.html" class="readmore stretched-link">Learn more <i class="bi bi-arrow-right"></i></a>
+            </div>
+          </div><!-- End Service Item -->
+
+        </div>
+
+      </div>
+    </section><!-- End Services Section -->
+
+    
+
+    
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer" class="footer">
+
+    <div class="footer-content position-relative">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6">
+            <div class="footer-info">
+              <h3>M W M</h3>
+              <p>
+                Kerala state <br>
+                1234, India<br><br>
+               
+              </p>
+             
+            </div>
+          </div>
+          <!-- End footer info column-->
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <!-- <h4>Useful Links</h4> -->
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About us</a></li>
+             
+              <li><a href="#">Contact Us</a></li>
+             
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-3 footer-links">
+            <!-- <h4>Useful Links</h4> -->
+            <ul>
+              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">Terms of service</a></li>
+       
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-links">
+            
+            <ul>
+         
+              
+              <li><strong>Phone:</strong> +1 5589 55488 55<br></li>
+              <li> <strong>Email:</strong> info@example.com<br></li>
+            </ul>
+          </div>
+
+
+          <!-- End footer links column-->
+
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-legal text-center position-relative">
+      <div class="container">
+        <div class="copyright">
+          &copy; Copyright <strong><span>MWM</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          
+          Designed by <a href="https://bootstrapmade.com/">AswathyK</a>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- End Footer -->
+
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'assets/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'assets/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/swiper/swiper-bundle.min.js' %}"></script>
+  <script src="{% static 'assets/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'assets/vendor/php-email-form/validate.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'assets/js/main.js' %}"></script>
+  
+
+</body>
+
+</html>
