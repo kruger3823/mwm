@@ -1,10 +1,11 @@
+
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>WORKER | Project Add</title>
+  <title>WORKER | view_job</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -16,7 +17,7 @@
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
- 
+
 
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
@@ -25,11 +26,11 @@
       <!-- <img src="../../dist/img/AdminLTELogo.png' %}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> -->
       <!-- <span class="brand-text font-weight-light">WORKER</span> -->
     <!-- </a> -->
-    
+
 
     <!-- Sidebar -->
     <div class="sidebar">
-      
+
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
@@ -110,13 +111,13 @@
               <p>View Applied Jobs</p>
             </a>
           </li>
-          
-         
+
+
         </ul>
       </li>
 
           <!-- ------- -->
-              
+
 
               <!-- <li class="nav-item">
                 <a href="/worker_viewprof" class="nav-link">
@@ -124,10 +125,10 @@
                   <p>View Profile</p>
                 </a>
               </li> -->
-             
 
 
-             
+
+
 
               <li class="nav-item menu-open">
                 <a href="#" class="nav-link">
@@ -150,19 +151,18 @@
                   <p>View Applied Policies</p>
                 </a>
               </li>
-              
-             
+
+
             </ul>
           </li>
 
-          
+
           <li class="nav-item">
             <a href="/worker_fitness" class="nav-link">
               <i class="far fa-circle nav-icon"></i>
               <p>Fitness Certificate</p>
             </a>
           </li>
-
 
 
 
@@ -176,12 +176,13 @@
               </li>
             </ul>
           </li>
-        
+
       </nav>
       <!-- /.sidebar-menu -->
     </div>
     <!-- /.sidebar -->
   </aside>
+
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
@@ -190,7 +191,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1>Add Profile </h1>
+           <h2>Job Details</h2>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -203,115 +204,76 @@
     </section>
 
     <!-- Main content -->
-   
+
     <section class="content">
-      <form method="POST" action="">
-        
-        {% csrf_token %}
-      <div class="row">
-        <div class="col-md-6">
-          <div class="card card-primary">
-            <div class="card-header" style="background-color: #17a2b8">
-              <h3 class="card-title">Additional info</h3>
-
-              <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                  <i class="fas fa-minus"></i>
-                </button>
-              </div>
-            </div>
-            <div class="card-body">
-                
-              <!-- <div class="form-group">
-                <label for="wname">Name</label>
-                <input type="text" id="wname" name="wname" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="emailid">Email Id</label>
-                <input type="email" id="emailid" name="emailid" class="form-control">
-              </div> -->
-             
-             
-              <div class="form-group">
-                <label for="reportdr">Fitness report by Doctor </label>
-                <input type="file" id="myfile" name="myfile" class="form-control">
-              </div>
-              <!-- <div class="form-group">
-                <label for="aadhaar">Add Aadhaar card</label>
-                <input type="file" id="myfile1" name="myfile1" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="eyereport">Add Eye test report</label>
-                <input type="file" id="myfile2" name="myfile2" class="form-control">
-              </div> -->
 
 
-            </div>
-            <div class="row mb-2">
-                <!-- <div class="col-sm-3">
-                  
-                  <input type="submit" name="submit" id="submit" style="background-color:#5896;">
-                </div> -->
-                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <div class="form-group" class="col-sm-3">
-                        
-                    <input type="submit" id="submit" name="submit" class="form-control"  style="background-color: #17a2b8;color: white;">
-                    <!-- style="color:#2589" -->
-                </div>
-                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                <!-- <div class="form-group" class="col-sm-3">
-                        
-                    <input type="reset" id="reset" name="reset" class="form-control" style="background-color:#007bff;color: #fff;">
-                 
-                </div> -->
-              </div>
-            </div>
-            <!-- /.card-body -->
-          </div>
-          <!-- /.card -->
-        </div>
+
+
+
+
+
+                <!-- <div class="row"> -->
+
+                    <!-- <div class="row"> -->
+
+                        <div class="col-md-12">
+                          <div style="overflow-x:auto;">
+                            <form action="" >
+                              {% csrf_token %}
+                              <div class="row">
+                                <div class="col-12">
+                                  <div class="card">
+                                    <div class="card-header" style="background-color: #17a2b8;color: white;">
+                                      <h3 class="card-title">Jobs Added By Job Provider</h3>
+
+                                      <!-- <div class="card-tools">
+                                        <div class="input-group input-group-sm" style="width: 150px;">
+                                          <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
+
+                                          <div class="input-group-append">
+                                            <button type="submit" class="btn btn-default">
+                                              <i class="fas fa-search"></i>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div> -->
+                                    </div>
+                                    <!-- /.card-header -->
+                                    <div class="container m-3">
+      <form action="" method="post" enctype="multipart/form-data">
+
+          {% csrf_token %}
+          {{ form.as_p }}
+          <input type="submit" name="submit">
+
       </form>
+                                      <a class="btn btn-primary m-2" href="{% url 'create-pdf' %}">Create PDF</a>
+  </div>
+
+
+                                      </table>
+                                      <a class="btn btn-primary m-2" href="{% url 'create-pdf' %}">Create PDF</a>
+                                    </div>
+                                    <!-- /.card-body -->
+                                  </div>
+                                  <!-- /.card -->
+                                </div>
+                              </div>
+                          </form>
+                          </div>
+                    </div>
+
+                  <!-- </div> -->
+
+
     </section>
 
-   <!-- <section>
-      <div>
-        <div class="col-md-6">
-          <div class="card card-secondary">
-            <div class="card-header">
-              <h3 class="card-title">Budget</h3>
-
-              <div class="card-tools">
-                <button type="button" class="btn btn-tool" data-card-widget="collapse" title="Collapse">
-                  <i class="fas fa-minus"></i>
-                </button>
-              </div>
-            </div>
-            <div class="card-body">
-              <div class="form-group">
-                <label for="inputEstimatedBudget">Estimated budget</label>
-                <input type="number" id="inputEstimatedBudget" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="inputSpentBudget">Total amount spent</label>
-                <input type="number" id="inputSpentBudget" class="form-control">
-              </div>
-              <div class="form-group">
-                <label for="inputEstimatedDuration">Estimated project duration</label>
-                <input type="number" id="inputEstimatedDuration" class="form-control">
-              </div>
-            </div>
-            
-          </div>
-         
-        </div>
-      </div>
-    </section>
-     -->
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
 
- 
+
 
   <!-- Control Sidebar -->
   <!-- <aside class="control-sidebar control-sidebar-dark"> -->
@@ -331,3 +293,26 @@
 <script src="{% static 'dist/js/demo.js' %}"></script>
 </body>
 </html>
+
+  <h1 style="font-size: 40px; margin-left: 30px;" class="p-2">
+     Add fitness
+  </h1>
+
+
+
+  <div class="container m-3">
+      <form action="" method="post" enctype="multipart/form-data">
+
+          {% csrf_token %}
+          {{ form.as_p }}
+          <input type="submit" name="Submit">
+
+      </form>
+  </div>
+
+
+
+
+
+
+

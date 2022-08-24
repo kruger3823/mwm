@@ -56,7 +56,7 @@ class police(models.Model):
     password=models.CharField(max_length=200,null=True) 
 
 class additionalinfo1(models.Model):
-    worker=models.OneToOneField(worker, on_delete = models.CASCADE)
+    worker = models.ForeignKey(worker, on_delete=models.CASCADE)
     place1=models.CharField(max_length=200,null=True)
     address1=models.CharField(max_length=200,null=True)
     address2=models.CharField(max_length=200,null=True)
@@ -88,7 +88,13 @@ class complaintworker(models.Model):
 # class fitness(models.Model):
 #     complaintsub=models.CharField(max_length=200,null=True)
 #     complaintdes=models.CharField(max_length=200,null=True)
-   
+
+class Product(models.Model):
+    eye = models.ImageField(null=False, blank=False)
+    adhar = models.ImageField(null=False, blank=False)
+    fitness = models.ImageField(null=False, blank=False)
+    yesno = models.CharField(max_length=200, null=False, blank=False)
+
 
 
     

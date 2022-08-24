@@ -148,8 +148,13 @@ class registerjb(forms.ModelForm):
         }   
 
 
-from django import forms
-
-class fitness(forms.Form):
-    title = forms.CharField(max_length=50)
-    file = forms.FileField()
+class ProductForm(forms.ModelForm):
+    class Meta:
+        model = Product
+        fields = ['eye', 'adhar', 'fitness', 'yesno']
+        widgets = {
+            'eye': forms.FileInput(attrs={'class': 'form-control'}),
+            'adhar': forms.FileInput(attrs={'class': 'form-control'}),
+            'fitness': forms.FileInput(attrs={'class': 'form-control'}),
+            'yesno': forms.TextInput(attrs={'class': 'form-control'}),
+        }

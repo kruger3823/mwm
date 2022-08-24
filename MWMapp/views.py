@@ -1,8 +1,12 @@
 from django.contrib.auth import logout, authenticate
-from django.http import HttpResponseRedirect
+from django.http import HttpResponseRedirect, HttpResponse
 from django.shortcuts import render,redirect
-from .forms import fitness
-from .models import fitnessreport
+from django.template.loader import get_template
+from xhtml2pdf import pisa
+from . import models
+from . import *
+from .forms import ProductForm
+from .models import Product
 
 from .models import jobs
 from .forms import *
@@ -90,10 +94,12 @@ def regworker(request):
         password=request.POST.get('password')
         password2=request.POST.get('password2')
 
-        worker(username=username,email=email,dob=dob,gender=gender,no=no,password=password,password2=password2).save()
+        worker(username=username,email=email,dob=dob,gender=gender,no=no,password=password,password2=password2).save(commit=False)
+        worker.status = True
+        worker.save()
         return redirect('login')
     else:
-        return render(request,'regworker.html')   
+        return render(request,'regworker.html')
 
 # -----additional info-----worker dashboard
 def worker_profile(request):
@@ -106,7 +112,7 @@ def worker_profile(request):
         gpay1=request.POST.get('gpay1')
         photo1=request.POST.get('photo1')
 
-        user=worker.objects.get(id=request.session['id'])
+        user = worker.objects.get(id=request.session['id'])
 
         additionalinfo1(worker=user,place1=place1,address1=address1,address2=address2,wages1=wages1,pan1=pan1,gpay1=gpay1,photo1=photo1).save()
         # cr=additionalinfo1.objects.all()
@@ -458,6 +464,54 @@ def jb_viewaddedjob(request):
 
 def logout(request):
     return render(request,'index.html')
+
+
+
+def pdf_report_create(request):
+    products = jobs.objects.all()
+
+    template_path = 'MWMapp/jb_viewaddedjobs.html'
+
+    context = {'products': products}
+
+    response = HttpResponse(content_type='application/pdf')
+
+    response['Content-Disposition'] = 'filename="products_report.pdf"'
+
+    template = get_template(template_path)
+
+    html = template.render(context)
+
+    # create a pdf
+    pisa_status = pisa.CreatePDF(
+       html, dest=response)
+    # if error then show some funy view
+    if pisa_status.err:
+       return HttpResponse('We had some errors <pre>' + html + '</pre>')
+    return response
+
+
+
+def addProduct(request):
+    form = ProductForm()
+
+    if request.method == 'POST':
+        print("hii")
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return redirect('workerdash')
+    else:
+        form = ProductForm()
+
+    context = {
+        "form": form
+    }
+
+    return render(request, 'worker_fitness.html', context)
+
+
+
 
 
 
