@@ -7,7 +7,8 @@ from django.conf.urls.static import static,settings
 
 urlpatterns=[
     path('',views.index,name="index"),
-    # path('index/',views.index,name="index"),
+    path('jb/',views.registerUser,name="regworker_view"),
+    path('regworker_view/',views.registerUser,name="regworker_view"),
     path('about/',views.about,name="about"),
     path('services/',views.services,name="services"),
     path('contact/',views.contact,name="contact"),
@@ -52,6 +53,7 @@ urlpatterns=[
      path('worker_profile/',views.worker_profile,name="worker_profile"),
      path('jbdash/',views.jbdash,name="jbdash"),
 
+path('jb_apply/',views.jb_apply,name="jb_apply"),
      path('jb_addjob/',views.jb_addjob,name="jb_addjob"),
      path('example/',views.example,name="example"),
      path('jbcomplaint/',views.jbcomplaint,name="jbcomplaint"),
@@ -78,3 +80,4 @@ urlpatterns=[
 ]
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+

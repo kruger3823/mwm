@@ -74,6 +74,15 @@ class jobs(models.Model):
     jbdes=models.CharField(max_length=200,null=True)
     jbno=models.CharField(max_length=200,null=True) 
 
+class applyjobs(models.Model):
+    jbtitle=models.CharField(max_length=200,null=True)
+    jbplace=models.CharField(max_length=200,null=True)
+    jbdate=models.CharField(max_length=200,null=True)
+    jbname=models.CharField(max_length=200,null=True)
+    jbdes=models.CharField(max_length=200,null=True)
+    jbno=models.CharField(max_length=200,null=True)
+
+
 class complaintjb(models.Model):
     complaintsub=models.CharField(max_length=200,null=True)
     complaintdes=models.CharField(max_length=200,null=True)

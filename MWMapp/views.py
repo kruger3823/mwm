@@ -15,6 +15,45 @@ from django.core.files.storage import FileSystemStorage
 
 # Create your views here.
 
+
+
+
+def registerUser(request):
+    page = 'register'
+    form = AdminSigupForm()
+
+    if request.method == 'POST':
+
+        form = AdminSigupForm(request.POST)
+        if form.is_valid():
+            print("hui")
+            user = form.save(commit=False)
+            user.save()
+            return redirect('index')
+
+    context = {'form': form, 'page': page}
+    return render(request, 'regworker.html', context)
+
+
+def jbUser(request):
+    page = 'register'
+    form = jbSigupForm()
+
+    if request.method == 'POST':
+
+        form = jbSigupForm(request.POST)
+        if form.is_valid():
+            print("hui")
+            user = form.save(commit=False)
+            user.save()
+            return redirect('index')
+
+    context = {'form': form, 'page': page}
+    return render(request, 'regworker.html', context)
+
+
+
+
 # indexpage-home
 def index(request):
     return render(request,'index.html')
@@ -142,6 +181,19 @@ def jb_addjob(request):
     
         jobs(jbtitle=jbtitle,jbplace=jbplace,jbdate=jbdate,jbdes=jbdes,jbname=jbname,jbno=jbno).save()
     return render(request,'jb_addjob.html')
+
+
+def jb_apply(request):
+    if request.method == "POST":
+        jbtitle = request.POST.get('jbtitle')
+        jbplace = request.POST.get('jbplace')
+        jbdate = request.POST.get('jbdate')
+        jbname = request.POST.get('jbname')
+        jbdes = request.POST.get('jbdes')
+        jbno = request.POST.get('jbno')
+
+        applyjobs(jbtitle=jbtitle, jbplace=jbplace, jbdate=jbdate, jbdes=jbdes, jbname=jbname, jbno=jbno).save()
+    return render(request, 'jb_applyjob.html')
 
 
 def add_scheme(request):
@@ -424,7 +476,36 @@ def jb_viewprof(request):
 
 
 def worker_changepass(request):
-    return render(request,'worker_changepass.html')
+        if request.method == "POST":
+            password = request.POST.get('password')
+
+
+            print('password', password)
+            # print('password')
+            # print(password)
+
+            cr = worker.objects.filter(password=password)
+            if cr:
+                user = worker.objects.get(password=password)
+                print(password)
+                id = user.id
+                print('id', id)
+                password = user.password
+
+
+
+                request.session['id'] = id
+
+
+                request.session['password'] = password
+                print(password)
+
+                return redirect('workerdash')
+            else:
+                return render(request, 'login.html')
+        else:
+            return render(request, 'regworker.html')
+
 
 def worker_viewjob(request):
     job_view = jobs.objects.all() #.filter(status=True)
