@@ -50,6 +50,14 @@ class insurance_scheme(models.Model):
     timelength= models.CharField(max_length=200, null=True)
     insuranceamount= models.CharField(max_length=200, null=True)
 
+class insurance_scheme1(models.Model):
+        policyno = models.CharField(max_length=200, null=True)
+        insurancetype = models.CharField(max_length=200, null=True)
+        company = models.CharField(max_length=200, null=True)
+        policyDescription = models.CharField(max_length=200, null=True)
+        timelength = models.CharField(max_length=200, null=True)
+        insuranceamount = models.CharField(max_length=200, null=True)
+
 
 class police(models.Model):
     email=models.CharField(max_length=200,null=True)

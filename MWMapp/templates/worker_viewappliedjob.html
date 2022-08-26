@@ -248,25 +248,23 @@
                                             <th>Job Title</th>
                                             <th>Date</th>
                                             <th>Place Of Job</th>
-                                           
                                             <th>Job Description</th>
                                             <th>Job Provider name</th>
                                             <th>Job Provider Contact No</th>
-                                            <th>Job Provider Email Id</th>
+
                                             <th>Status</th>
                                           </tr>
                                       
                                         </thead>
-                                        <tbody>
+                                         {% for s in job_view %}
                                           <tr>
-                                            <td>183</td>
-                                            <td>John Doe</td>
-                                            <td>11-7-2014</td>
-                                            <td><span class="tag tag-success">Approved</span></td>
-                                            <td>dxgfx</td>
-                                            <td>dxgfx</td>
-                                            <td>dxgfx</td>
-                                            <td>accepted/Rejected</td>
+                                            <td> {{s.policyno}}</td>
+                                            <td> {{s.insurancetype}}</td>
+                                            <td>{{s.company}}</td>
+                                            <td>{{s.policyDescription}}</td>
+                                            <td>{{s.timelength}}</td>
+                                            <td>{{s.insuranceamount}}</td>
+                                          {% endfor %}
 
                                           </tr>
                                        

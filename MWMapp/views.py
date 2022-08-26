@@ -195,6 +195,20 @@ def jb_apply(request):
         applyjobs(jbtitle=jbtitle, jbplace=jbplace, jbdate=jbdate, jbdes=jbdes, jbname=jbname, jbno=jbno).save()
     return render(request, 'jb_applyjob.html')
 
+def jb_apply1(request):
+    if request.method == "POST":
+        policyno = request.POST.get('policyno')
+        insurancetype= request.POST.get('insurancetype')
+        company = request.POST.get('company')
+        timelength = request.POST.get('timelength')
+        policyDescription = request.POST.get('policyDescription')
+        insuranceamount = request.POST.get('insuranceamount')
+
+        insurance_scheme(policyno=policyno,insurancetype=insurancetype,company=company,timelength=timelength,policyDescription=policyDescription,insuranceamount=insuranceamount).save()
+    return render(request,'jb_applyjob1.html')
+
+
+
 
 def add_scheme(request):
     if request.method == "POST":
@@ -528,20 +542,36 @@ def jb_changepass(request):
     return render(request,'jb_changepass.html')
 
 def worker_viewappliedjob(request):
-    return render(request,'worker_viewappliedjob.html')
+    job_view = applyjobs.objects.all()  # .filter(status=True)
+    return render(request, 'worker_viewappliedjob.html', {'job_view': job_view})
+
+
+def worker_viewappliedpolicy(request):
+    job_view = insurance_scheme1.objects.all()  # .filter(status=True)
+    return render(request, 'worker_viewappliedpolicy.html', {'job_view': job_view})
 
 
 def worker_viewpolicy(request):
     insurance_view = insurance_scheme.objects.all()  # .filter(status=True)
     return render(request,'worker_viewpolicy.html',{'insurance_view': insurance_view})
 
-def worker_viewappliedpolicy(request):
-    return render(request,'worker_viewappliedpolicy.html')
+#def worker_viewappliedpolicy(request):
+ #   job_view = applyjobs.objects.all()  # .filter(status=True)
+  #  return render(request,'worker_viewappliedpolicy.html',{'job_view': job_view})
 
 
 def jb_viewaddedjob(request):
     job_view = jobs.objects.all()  # .filter(status=True)
     return render(request,'jb_viewaddedjob.html',{'job_view': job_view})
+
+def jb_viewaddedjob1(request):
+    job_view = insurance_scheme.objects.all()
+
+    return render(request,'jb_viewaddedjob1.html',{'job_view': job_view})
+
+def jb_viewaddedjob2(request):
+    job_view = insurance_scheme.objects.all()  # .filter(status=True)
+    return render(request,'jb_viewaddedjob2.html',{'job_view': job_view})
 
 def logout(request):
     return render(request,'index.html')

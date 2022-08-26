@@ -53,7 +53,10 @@ urlpatterns=[
      path('worker_profile/',views.worker_profile,name="worker_profile"),
      path('jbdash/',views.jbdash,name="jbdash"),
 
-path('jb_apply/',views.jb_apply,name="jb_apply"),
+
+
+     path('apply_policy/',views.jb_apply1,name="apply_policy"),
+     path('jb_apply/',views.jb_apply,name="jb_apply"),
      path('jb_addjob/',views.jb_addjob,name="jb_addjob"),
      path('example/',views.example,name="example"),
      path('jbcomplaint/',views.jbcomplaint,name="jbcomplaint"),
@@ -70,9 +73,10 @@ path('jb_apply/',views.jb_apply,name="jb_apply"),
 
      path('police_dash/',views.police_dash,name="police_dash"),
      path('worker_viewappliedjob/',views.worker_viewappliedjob,name="worker_viewappliedjob"),
-     path('worker_viewpolicy/',views.worker_viewpolicy,name="worker_viewpolicy"),
+     path('worker_viewpolicy/',views.jb_viewaddedjob2,name="worker_viewpolicy"),
      path('worker_viewappliedpolicy/',views.worker_viewappliedpolicy,name="worker_viewappliedpolicy"),
      path('jb_viewaddedjob/',views.jb_viewaddedjob,name="jb_viewaddedjob"),
+    path('view_scheme/',views.jb_viewaddedjob1,name="view_scheme"),
      path('add_scheme/',views.add_scheme,name="add_scheme"),
      path('logout/', views.logout, name="logout"),
 
