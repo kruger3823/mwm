@@ -143,6 +143,7 @@
                   <i class="far fa-circle nav-icon"></i>
                   <p>View Policies</p>
                 </a>
+
               </li>
               <li class="nav-item">
                 <a href="/worker_viewappliedpolicy" class="nav-link">
@@ -162,6 +163,20 @@
               <p>Fitness Certificate</p>
             </a>
           </li>
+
+              <li class="nav-item">
+                <a href="/worker_viewappliedpolicy" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>View Applied Policies</p>
+                </a>
+              </li>
+
+              <li class="nav-item">
+                <a href="/logout" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>logout</p>
+                </a>
+              </li>
 
 
 
@@ -254,7 +269,7 @@
                                           </tr>
 
                                         </thead>
-                                        {% for s in insurance_view %}
+                                        {% for s in job_view %}
                                           <tr>
                                             <td> {{s.policyno}}</td>
                                             <td> {{s.insurancetype}}</td>

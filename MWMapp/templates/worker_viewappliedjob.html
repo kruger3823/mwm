@@ -248,19 +248,37 @@
                                             <th>Job Title</th>
                                             <th>Date</th>
                                             <th>Place Of Job</th>
+<<<<<<< HEAD
                                   
+=======
+                                            <th>Job Description</th>
+                                            <th>Job Provider name</th>
+                                            <th>Job Provider Contact No</th>
+
+>>>>>>> f131d1a7e2652eb315b4d5de9a5e1f0d43990975
                                             <th>Status</th>
                                           </tr>
                                       
                                         </thead>
-                                        <tbody>
+                                         {% for s in job_view %}
                                           <tr>
+<<<<<<< HEAD
                                             {%for i in job_new %}
                                             <td>{{i.jbtitle}}</td>
                                             <td> {{i.jbdate}}</td>
                                             <td>{{i.place}}}</td>
                                           
                                               {% endfor %}
+=======
+                                            <td> {{s.policyno}}</td>
+                                            <td> {{s.insurancetype}}</td>
+                                            <td>{{s.company}}</td>
+                                            <td>{{s.policyDescription}}</td>
+                                            <td>{{s.timelength}}</td>
+                                            <td>{{s.insuranceamount}}</td>
+                                          {% endfor %}
+
+>>>>>>> f131d1a7e2652eb315b4d5de9a5e1f0d43990975
                                           </tr>
                                        
                                         </tbody>

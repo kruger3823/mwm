@@ -16,7 +16,7 @@
 <body class="hold-transition sidebar-mini">
 <!-- Site wrapper -->
 <div class="wrapper">
- 
+
 
   <!-- Main Sidebar Container -->
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
@@ -25,11 +25,11 @@
       <!-- <img src="../../dist/img/AdminLTELogo.png' %}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8"> -->
       <!-- <span class="brand-text font-weight-light">WORKER</span> -->
     <!-- </a> -->
-    
+
 
     <!-- Sidebar -->
     <div class="sidebar">
-      
+
 
       <!-- Sidebar Menu -->
       <nav class="mt-2">
@@ -110,13 +110,13 @@
               <p>View Applied Jobs</p>
             </a>
           </li>
-          
-         
+
+
         </ul>
       </li>
 
           <!-- ------- -->
-              
+
 
               <!-- <li class="nav-item">
                 <a href="/worker_viewprof" class="nav-link">
@@ -124,7 +124,7 @@
                   <p>View Profile</p>
                 </a>
               </li> -->
-             
+
 
 <li class="nav-item">
                 <a href="/jb_apply" class="nav-link">
@@ -132,7 +132,7 @@
                   <p>Job Apply</p>
                 </a>
               </li>
-             
+
 
               <li class="nav-item menu-open">
                 <a href="#" class="nav-link">
@@ -155,8 +155,8 @@
                   <p>View Applied Policies</p>
                 </a>
               </li>
-              
-             
+
+
             </ul>
           </li>
 
@@ -180,7 +180,7 @@
               </li>
             </ul>
           </li>
-        
+
       </nav>
       <!-- /.sidebar-menu -->
     </div>
@@ -208,19 +208,19 @@
     </section>
 
     <!-- Main content -->
-   
+
     <section class="content">
-      
-     
 
 
 
 
-          
+
+
+
                 <!-- <div class="row"> -->
-                  
+
                     <!-- <div class="row"> -->
-                   
+
                         <div class="col-md-12">
                           <div style="overflow-x:auto;">
                             <form action="" >
@@ -230,11 +230,11 @@
                                   <div class="card">
                                     <div class="card-header" style="background-color: #17a2b8;color: white;">
                                       <h3 class="card-title">Jobs Added By Job Provider</h3>
-                      
+
                                       <!-- <div class="card-tools">
                                         <div class="input-group input-group-sm" style="width: 150px;">
                                           <input type="text" name="table_search" class="form-control float-right" placeholder="Search">
-                      
+
                                           <div class="input-group-append">
                                             <button type="submit" class="btn btn-default">
                                               <i class="fas fa-search"></i>
@@ -247,7 +247,7 @@
                                     <div class="card-body table-responsive p-0">
                                       <table class="table table-hover text-nowrap">
                                         <thead>
-                                          
+
                                           <tr>
                                             <th>Job Title</th>
                                             <th>Date</th>
@@ -257,21 +257,20 @@
                                             <th>Job Provider Contact No</th>
                                             <th>Apply Job button</th>
                                           </tr>
-                                      
+
                                         </thead>
                                         {% for s in job_view %}
                                           <tr>
-                                            <td> {{s.jbtitle}}</td>
-                                            <td> {{s.jbdate}}</td>
-                                            <td>{{s.jbplace}}</td>
-                                            <td>{{s.jbdes}}</td>
-                                            <td>{{s.jbname}}</td>
-                                            <td>{{s.jbno}}</td>
-                                            <td><a  style="color:blue; text-decoration:none;font-size:25px;" href="{% url 'job-apply' s.id  %}">&#9998;</a></td>
+                                            <td> {{s.policyno}}</td>
+                                            <td> {{s.insurancetype}}</td>
+                                            <td>{{s.company}}</td>
+                                            <td>{{s.policyDescription}}</td>
+                                            <td>{{s.timelength}}</td>
+                                            <td>{{s.insuranceamount}}</td>
                                           {% endfor %}
 
                                           </tr>
-                                       
+
 
                                       </table>
 
@@ -284,17 +283,17 @@
                           </form>
                           </div>
                     </div>
-                 
+
                   <!-- </div> -->
-                
+
 
     </section>
-    
+
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->
-    
- 
+
+
 
   <!-- Control Sidebar -->
   <!-- <aside class="control-sidebar control-sidebar-dark"> -->

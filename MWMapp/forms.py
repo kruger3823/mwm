@@ -1,5 +1,32 @@
 from django import forms
 from .models import *
+from django.contrib.auth.models import User
+from django.contrib.auth.forms import UserCreationForm
+from django import forms
+
+class AdminSigupForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ['username', 'password']
+
+    def __init__(self, *args, **kwargs):
+        super(AdminSigupForm, self).__init__(*args, **kwargs)
+        self.fields['username'].widget.attrs.update(
+            {'class': 'form-control', 'placeholder': 'Enter username...'})
+        self.fields['password'].widget.attrs.update(
+            {'class': 'form-control', 'placeholder': 'Enter password...'})
+
+class jbSigupForm(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ['username', 'password']
+
+    def __init__(self, *args, **kwargs):
+        super(jbSigupForm, self).__init__(*args, **kwargs)
+        self.fields['username'].widget.attrs.update(
+            {'class': 'form-control', 'placeholder': 'Enter username...'})
+        self.fields['password'].widget.attrs.update(
+            {'class': 'form-control', 'placeholder': 'Enter password...'})
 
 
 
@@ -57,7 +84,23 @@ class addjob(forms.ModelForm):
                    'jbdes':forms.TextInput(attrs={'class' :'form-control'}),
                    'jbno':forms.TextInput(attrs={'class' :'forms-control'}),
                   
-        }   
+        }
+
+
+class applyjob(forms.ModelForm):
+    class Meta:
+        model = jobs
+        fields = ('jbtitle', 'jbplace', 'jbdate', 'jbname', 'jbdes', 'jbno')
+        widigets = {
+
+            'jbtitle': forms.TextInput(attrs={'class': 'form-control'}),
+            'jbplace': forms.TextInput(attrs={'class': 'form-control'}),
+            'jbdate': forms.TextInput(attrs={'class': 'forms-control'}),
+            'jbname': forms.TextInput(attrs={'class': 'forms-control'}),
+            'jbdes': forms.TextInput(attrs={'class': 'form-control'}),
+            'jbno': forms.TextInput(attrs={'class': 'forms-control'}),
+
+        }
 
 
 class addcomplaint(forms.ModelForm):
