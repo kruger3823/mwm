@@ -52,7 +52,15 @@ def jbUser(request):
     return render(request, 'regworker.html', context)
 
 
-
+def approve_worker(request,id):
+    prod = Product.objects.get(pk=id)
+    prod.approved = True
+    prod.save()
+   
+    
+   
+    
+    return redirect('/approve')
 
 # indexpage-home
 def index(request):
@@ -64,6 +72,13 @@ def about(request):
  # services page   
 def services(request):
     return render(request,'services.html')
+
+def approve(request):
+    approve = Product.objects.filter(approved = False)
+    context = {
+        "approve":approve,
+    }
+    return render(request,'approve.html',context)
 
   # contact page   
 def contact(request):

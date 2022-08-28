@@ -112,6 +112,7 @@ class Product(models.Model):
     adhar = models.ImageField(null=False, blank=False)
     fitness = models.ImageField(null=False, blank=False)
     yesno = models.CharField(max_length=200, null=False, blank=False)
+    approved = models.BooleanField(default=False)
 
 
 

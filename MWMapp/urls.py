@@ -11,7 +11,9 @@ urlpatterns=[
     path('regworker_view/',views.registerUser,name="regworker_view"),
     path('about/',views.about,name="about"),
     path('services/',views.services,name="services"),
+    path('approve/',views.approve,name="approve"),
     path('contact/',views.contact,name="contact"),
+    path('approve-worker/<int:id>/',views.approve_worker,name="approve-worker"),
 
 
 # ----worker-reg---
