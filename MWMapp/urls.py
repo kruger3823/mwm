@@ -24,7 +24,7 @@ urlpatterns=[
     path('regjobprovider/',views.regjobprovider,name="regjobprovider"),
     path('jblogin/',views.jblogin,name="jblogin"),
     path('log1/',views.log1,name="log1"),
-    path('job_view/',views.jobs,name="job_view"),
+  #  path('job_view/',views.jobs,name="job_view"),
 # ----jobprovider-reg---
 
 # ----insurance-reg---
@@ -73,6 +73,8 @@ urlpatterns=[
      path('jb_viewaddedjob/',views.jb_viewaddedjob,name="jb_viewaddedjob"),
      path('add_scheme/',views.add_scheme,name="add_scheme"),
      path('logout/', views.logout, name="logout"),
+
+     path('job-apply/<int:pk>/', views.job_apply, name="job-apply"),
 
 
 ]

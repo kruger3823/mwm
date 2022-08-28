@@ -73,6 +73,7 @@ class jobs(models.Model):
     jbname=models.CharField(max_length=200,null=True) 
     jbdes=models.CharField(max_length=200,null=True)
     jbno=models.CharField(max_length=200,null=True) 
+    jbstatus=models.BooleanField()
 
 class complaintjb(models.Model):
     complaintsub=models.CharField(max_length=200,null=True)

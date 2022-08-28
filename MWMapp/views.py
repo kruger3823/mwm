@@ -490,7 +490,13 @@ def pdf_report_create(request):
        return HttpResponse('We had some errors <pre>' + html + '</pre>')
     return response
 
+def job_apply(request,pk):
+    job_new = jobs.objects.filter(id=pk)
+    
+    context = {"job_new":job_new}    
 
+
+    return render(request,"worker_viewappliedjob.html",context)
 
 def addProduct(request):
     form = ProductForm()

@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from MWMapp.models import jobs
-from fitness.models import Product
+#from fitness.models import Product
 
 from django.http import HttpResponse
 
